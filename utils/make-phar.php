@@ -16,6 +16,8 @@ if ( ! isset( $args[0] ) || empty( $args[0] ) ) {
 	exit(1);
 }
 
+/* Avoid direct calls to this file. */
+if ( !defined('DEST_PATH') )
 define( 'DEST_PATH', $args[0] );
 
 define( 'BE_QUIET', isset( $runtime_config['quiet'] ) && $runtime_config['quiet'] );
